@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Booking | Heritage Explore</title>
+    <link rel="stylesheet" href="">
+</head>
+<script type="text/javasript" >
+    function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let mobile = document.getElementById("mobile").value;
+
+    if (name == "" || email == "" || mobile == "") {
+        alert("Please fill all required fields");
+        return false;
+    }
+
+    if (mobile.length != 10) {
+        alert("Enter valid 10 digit mobile number");
+        return false;
+    }
+
+    return true;
+}
+</script>
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+form {
+    width: 350px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 15px 0;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+}
+</style>
+<body>
+
+<h2 style="text-align:center;">Heritage Explore – Ticket Booking</h2>
+
+<form action="php/book_ticket.php" method="post" onsubmit="return validateForm()">
+
+    <label>Full Name</label>
+    <input type="text" id="name" name="name">
+
+    <label>Email</label>
+    <input type="email" id="email" name="email">
+
+    <label>Mobile Number</label>
+    <input type="text" id="mobile" name="mobile">
+
+    <label>Select Heritage Place</label>
+    <select name="place">
+        <option value="">-- Select Place --</option>
+        <option>Taj Mahal</option>
+        <option>Ajanta Caves</option>
+        <option>Ellora Caves</option>
+        <option>Red Fort</option>
+    </select>
+
+    <label>Visit Date</label>
+    <input type="date" name="date">
+
+    <label>Number of Tickets</label>
+    <input type="number" name="tickets" min="1">
+
+    <button type="submit">Book Ticket</button>
+
+</form>
+
+<!--<?php
+$name = $_POST['name'];
+$email = $_POST['email'];
+$mobile = $_POST['mobile'];
+$place = $_POST['place'];
+$date = $_POST['date'];
+$tickets = $_POST['tickets'];
+
+echo "<h2>Ticket Booking Successful</h2>";
+echo "Name: $name <br>";
+echo "Email: $email <br>";
+echo "Mobile: $mobile <br>";
+echo "Place: $place <br>";
+echo "Visit Date: $date <br>";
+echo "Tickets: $tickets <br>";
+?>-->
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #010b11;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0px 15px;
+      font-weight: bold;
+      margin-block: 220px;
+      text-align: center;
+    }
+    .hero {
+      background-image: url('https://as1.ftcdn.net/v2/jpg/01/42/04/48/1000_F_142044867_cqgHthpqpBzRZdOQLfitGWkbcjc9Sunu.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      height: 300px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    .hero button {
+      background-color: #ffb703;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .destinations {
+      padding: 40px;
+      text-align: center;
+    }
+    .destinations h2 {
+      color: #0077b6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px;
+    }
+    .about {
+      padding: 40px;
+      text-align: center;
+      background-color: #e0f7fa;
+    }
+    footer {
+      background-color: #010b11;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  
